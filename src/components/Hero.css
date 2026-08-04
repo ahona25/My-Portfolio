@@ -258,12 +258,27 @@
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     text-align: center;
+  }
+
+  /* Image comes FIRST on mobile */
+  .hero-visual {
+    order: -1;
   }
 
   .hero-content {
     align-items: center;
+    order: 1;
+  }
+
+  /* Move social bar to after the image visually */
+  .hero-social-bar {
+    order: 2;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-strong);
+    margin-top: 8px;
   }
 
   .hero-heading {
@@ -274,13 +289,9 @@
     justify-content: center;
   }
 
-  .hero-social-bar {
-    justify-content: center;
-  }
-
   .portrait-wrapper {
-    width: 320px;
-    height: 400px;
+    width: 300px;
+    height: 380px;
   }
 }
 
